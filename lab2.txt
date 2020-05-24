@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <p>Список ваших учеников 🗿:</p>
+
+  <script>
+    let part = document.createElement('part');
+    let list = [];
+    document.body.append(part);
+
+    while (true) {
+      let data = prompt("Введите фамилию вашего ученика", "");
+      if (!data) {
+        break;
+      }
+      list.push (data);
+    }
+      
+      list.sort();
+      list.push(list.length);
+
+      for(let i = 0; i<list.length; i++) 
+      {
+      let li = document.createElement('li');
+      li.textContent = list[i];
+      part.append(li);
+      }
+      
+     
+  </script>
+
+</body>
+</html>
